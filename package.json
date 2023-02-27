@@ -26,7 +26,8 @@
     "start:prod-server": "cross-env NODE_ENV=production nodemon server/main.js",
     "copy": "npx ncp ./node_modules/@esri/calcite-components/dist/calcite/assets/ ./public/assets && npx ncp ./node_modules/@arcgis/core/assets/ ./public/assets",
     "postinstall": "npm run copy",
-    "start": "concurrently \"npm run start:server\" \"npm run start:web\""
+    "start": "concurrently \"npm run start:server\" \"npm run start:web\"",
+    "start:production": "concurrently \"npm run start:prod-server\" \"npm run start:web\""
   },
   "eslintConfig": {
     "extends": [
