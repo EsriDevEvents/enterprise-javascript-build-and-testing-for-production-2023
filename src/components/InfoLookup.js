@@ -12,7 +12,10 @@ function InfoLookup({ currentBookmark }) {
 
   useEffect(() => {
     if (currentBookmark) {
-      setContent({ ...content, isLoading: true });
+      // We have to use a "functional" setContent to avoid render loop
+      setContent((theContent) => {
+        return { ...theContent, isLoading: true };
+      });
 
       const parms = new URLSearchParams();
       parms.set("park", currentBookmark.name);

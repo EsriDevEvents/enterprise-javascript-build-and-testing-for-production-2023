@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useMemo } from "react";
+import React, { useRef, useEffect } from "react";
 import WebMap from "@arcgis/core/WebMap";
 import MapView from "@arcgis/core/views/MapView";
 import "@arcgis/core/assets/esri/themes/light/main.css";
@@ -23,7 +23,7 @@ function MapContainer({ onMapLoad, selectedBookmark }) {
     view.when(() => {
       onMapLoad(webmap.bookmarks);
     });
-  }, []);
+  }, [onMapLoad]);
 
   useEffect(() => {
     view.when(() => {
