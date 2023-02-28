@@ -2,6 +2,7 @@ import "@esri/calcite-components/dist/components/calcite-block";
 import "@esri/calcite-components/dist/components/calcite-notice";
 import { CalciteBlock, CalciteNotice } from "@esri/calcite-components-react";
 import { useEffect, useState } from "react";
+import { parkLookup } from "../api/parkLookup";
 
 function InfoLookup({ currentBookmark }) {
   const [content, setContent] = useState({
@@ -17,21 +18,15 @@ function InfoLookup({ currentBookmark }) {
         return { ...theContent, isLoading: true };
       });
 
-      const parms = new URLSearchParams();
-      parms.set("park", currentBookmark.name);
-
-      fetch(`/park-lookup?${parms.toString()}`)
-        .then((resp) => resp.json())
-        .then((obj) => {
-          console.log(obj);
+      parkLookup(currentBookmark.name)
+        .then((parkInfo) => {
           setContent({
             isLoading: false,
             headerText: currentBookmark.name,
-            bodyText: obj.info,
+            bodyText: parkInfo,
           });
         })
         .catch((err) => {
-          console.error(err);
           setContent({
             isLoading: false,
             headerText: "Exception getting info",
