@@ -20,7 +20,7 @@
   "scripts": {
     "start:web": "react-scripts start",
     "build:web": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!calcite-components-react)/\"",
     "eject": "react-scripts eject",
     "start:server": "cross-env NODE_ENV=development nodemon server/main.js",
     "start:prod-server": "cross-env NODE_ENV=production nodemon server/main.js",
