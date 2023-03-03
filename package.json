@@ -7,8 +7,6 @@
     "@arcgis/core": "^4.26.3",
     "@esri/calcite-components": "^1.0.7",
     "@esri/calcite-components-react": "^1.0.4",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "config": "^3.3.9",
     "express": "^4.18.2",
@@ -20,7 +18,8 @@
   "scripts": {
     "start:web": "react-scripts start",
     "build:web": "react-scripts build",
-    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!calcite-components-react)/\"",
+    "test": "react-scripts test",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
     "eject": "react-scripts eject",
     "start:server": "cross-env NODE_ENV=development nodemon server/main.js",
     "start:prod-server": "cross-env NODE_ENV=production nodemon server/main.js",
@@ -47,7 +46,15 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!calcite-components-react)/",
+      "node_modules/(?!calcite-components)/"
+    ]
+  },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
     "concurrently": "^7.6.0",
     "cross-env": "^7.0.3",
     "jest-fetch-mock": "^3.0.3",
