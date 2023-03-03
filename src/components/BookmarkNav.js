@@ -7,7 +7,9 @@ function BookmarkNav({ bookmarks, onSelection }) {
   const currBookmarks = bookmarks || [];
 
   return (
-    <CalciteSelect onCalciteSelectChange={(event) => onSelection(event.target.value)}>
+    <CalciteSelect
+      onCalciteSelectChange={(event) => onSelection(event.target.value)}
+    >
       {currBookmarks.map((b, i) => (
         <CalciteOption key={b.name} value={b}>
           {b.name}

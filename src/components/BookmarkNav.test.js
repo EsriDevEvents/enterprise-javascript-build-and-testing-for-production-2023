@@ -28,7 +28,10 @@ test("it should call onSelection when selected", async () => {
   ];
 
   const { getByTestId, getAllByTestId } = render(
-    <BookmarkNav bookmarks={bookmarks} onSelection={(...args) => testSelection(...args)} />
+    <BookmarkNav
+      bookmarks={bookmarks}
+      onSelection={(...args) => testSelection(...args)}
+    />
   );
 
   const select = getByTestId("select");

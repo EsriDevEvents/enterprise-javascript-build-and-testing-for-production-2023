@@ -22,7 +22,9 @@ jest.mock("../api/parkLookup");
 test("snapshot test", () => {
   parkLookup.mockResolvedValue("parkInfo");
 
-  const tree = SnapshotRenderer.create(<InfoLookup currentBookmark={null} />).toJSON();
+  const tree = SnapshotRenderer.create(
+    <InfoLookup currentBookmark={null} />
+  ).toJSON();
 
   expect(tree).toMatchSnapshot();
 });
@@ -43,7 +45,9 @@ test("It updates with the given bookmark", async () => {
 
   parkLookup.mockResolvedValue("Page Info");
 
-  const { getByText, findByText } = render(<InfoLookup currentBookmark={bookmark} />);
+  const { getByText, findByText } = render(
+    <InfoLookup currentBookmark={bookmark} />
+  );
 
   await findByText("theBookmark");
 
@@ -58,7 +62,9 @@ test("It shows an error message", async () => {
 
   parkLookup.mockRejectedValue("An Error!");
 
-  const { getByText, findByText } = render(<InfoLookup currentBookmark={bookmark} />);
+  const { getByText, findByText } = render(
+    <InfoLookup currentBookmark={bookmark} />
+  );
 
   await findByText("Exception getting info");
 
