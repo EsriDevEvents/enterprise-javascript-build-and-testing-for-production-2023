@@ -1,4 +1,4 @@
-import { parkLookup } from "./parkLookup";
+import { parkLookup } from "../../api/parkLookup";
 
 beforeEach(() => {
   fetchMock.doMock();

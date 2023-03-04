@@ -1,19 +1,19 @@
 import { render, screen } from "@testing-library/react";
-import App from "./App";
+import App from "../App";
 
-jest.mock("./components/MapContainer", () => {
+jest.mock("../components/MapContainer", () => {
   return () => {
     return <div>Map Container</div>;
   };
 });
 
-jest.mock("./components/BookmarkNav", () => {
+jest.mock("../components/BookmarkNav", () => {
   return () => {
     return <div>Bookmark Nav</div>;
   };
 });
 
-jest.mock("./components/InfoLookup", () => {
+jest.mock("../components/InfoLookup", () => {
   return () => {
     return <div>Info Lookup</div>;
   };

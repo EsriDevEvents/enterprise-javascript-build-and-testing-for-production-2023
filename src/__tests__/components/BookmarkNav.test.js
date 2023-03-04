@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import BookmarkNav from "./BookmarkNav";
+import BookmarkNav from "../../components/BookmarkNav";
 
 jest.mock("@esri/calcite-components-react", () => {
   return {

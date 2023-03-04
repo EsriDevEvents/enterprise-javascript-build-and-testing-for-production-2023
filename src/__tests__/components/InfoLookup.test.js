@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import SnapshotRenderer from "react-test-renderer";
-import InfoLookup from "./InfoLookup";
-import { parkLookup } from "../api/parkLookup";
+import InfoLookup from "../../components/InfoLookup";
+import { parkLookup } from "../../api/parkLookup";
 
 // Mock out Calcite components
 jest.mock("@esri/calcite-components-react", () => {
@@ -17,7 +17,7 @@ jest.mock("@esri/calcite-components-react", () => {
 });
 
 // Mock parkLookup so we can controll rendering
-jest.mock("../api/parkLookup");
+jest.mock("../../api/parkLookup");
 
 test("snapshot test", () => {
   parkLookup.mockResolvedValue("parkInfo");
