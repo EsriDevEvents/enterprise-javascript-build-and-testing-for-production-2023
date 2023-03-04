@@ -32,7 +32,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser. 
 
 ### Configuration switching
 
-The project has a "production" mode that demonstrates node-config's heirarchical configuration management. Run the following at the command prompt:
+The project has a "production" mode that demonstrates node-config's hierarchical configuration management. Run the following at the command prompt:
 
 ```
 npm start:production
@@ -50,7 +50,7 @@ This runs the unit tests in interactive watch mode. Enter `a` at the prompt to r
 
 ## Building the project
 
-Run the folling at a command prompt:
+Run the following at a command prompt:
 
 ```
 npm run build
