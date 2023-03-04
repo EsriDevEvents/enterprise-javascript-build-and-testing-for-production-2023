@@ -4,6 +4,14 @@ import { CalciteBlock, CalciteNotice } from "@esri/calcite-components-react";
 import { useEffect, useState } from "react";
 import { parkLookup } from "../api/parkLookup";
 
+/**
+ * Component that displays information about the currently
+ * selected bookmark.
+ *
+ * @param {Object} param0 React parameters passed to the object
+ * @param {Object} param0.currentBookmark the currently selected bookmark
+ * @returns
+ */
 function InfoLookup({ currentBookmark }) {
   const [content, setContent] = useState({
     headerText: "Select a bookmark",
@@ -11,9 +19,10 @@ function InfoLookup({ currentBookmark }) {
     isLoading: false,
   });
 
+  // Determine if we have a selected bookmark
   useEffect(() => {
     if (currentBookmark) {
-      // We have to use a "functional" setContent to avoid render loop
+      // We have to use a "functional" setContent call to avoid render loop
       setContent((theContent) => {
         return { ...theContent, isLoading: true };
       });

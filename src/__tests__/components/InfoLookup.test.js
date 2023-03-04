@@ -16,9 +16,10 @@ jest.mock("@esri/calcite-components-react", () => {
   };
 });
 
-// Mock parkLookup so we can controll rendering
+// Mock parkLookup so we can control what name gets returned
 jest.mock("../../api/parkLookup");
 
+// Snapshot test
 test("snapshot test", () => {
   parkLookup.mockResolvedValue("parkInfo");
 

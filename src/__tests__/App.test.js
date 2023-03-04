@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import App from "../App";
 
+// Mock out components so we only check the App
 jest.mock("../components/MapContainer", () => {
   return () => {
     return <div>Map Container</div>;

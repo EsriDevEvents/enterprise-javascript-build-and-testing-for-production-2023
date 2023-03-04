@@ -2,6 +2,7 @@ import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import BookmarkNav from "../../components/BookmarkNav";
 
+// Mock Calcite components with standard HTML requivalents
 jest.mock("@esri/calcite-components-react", () => {
   return {
     CalciteSelect: ({ onCalciteSelectChange, children }) => (

@@ -1,3 +1,9 @@
+/**
+ * Queries the park service for a given name.
+ *
+ * @param {String} parkName Name of the park to look up
+ * @returns String with park info
+ */
 async function parkLookup(parkName) {
   const params = new URLSearchParams();
   params.set("park", parkName);

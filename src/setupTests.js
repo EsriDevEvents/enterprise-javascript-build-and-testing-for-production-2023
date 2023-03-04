@@ -4,6 +4,6 @@
 // learn more: https://github.com/testing-library/jest-dom
 import "@testing-library/jest-dom";
 
-// Mock fetch out
+// Mock the "fetch" function
 import { enableFetchMocks } from "jest-fetch-mock";
 enableFetchMocks();

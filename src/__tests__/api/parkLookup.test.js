@@ -1,5 +1,6 @@
 import { parkLookup } from "../../api/parkLookup";
 
+// Reset the fetch mock before each test
 beforeEach(() => {
   fetchMock.doMock();
 });

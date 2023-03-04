@@ -15,6 +15,10 @@ import InfoLookup from "./components/InfoLookup";
 
 setAssetPath(window.location.href);
 
+/**
+ * Sets up the main page components (sidebar and map)
+ * @returns JSX for the main page
+ */
 function App() {
   const [bookmarks, setBookmarks] = useState([]);
   const [selectedBookmark, setSelectedBookmark] = useState(null);
