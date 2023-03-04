@@ -10,6 +10,10 @@ This project makes use of the following:
 - [ExpressJS](https://expressjs.com/) sets up a simple REST interface.
 - [node-config](https://github.com/node-config/node-config) controls the REST interface configuration (i.e. the text that gets returned).
 
+## Slides and recording
+
+Most of the recordings are uploaded to [2023 Esri Developer Summit in "mediaspace.esri.com"](https://mediaspace.esri.com/channel/2023%2BEsri%2BDeveloper%2BSummit/292702072) and slides are made available at [Esri Events > Proceedings](https://www.esri.com/en-us/about/events/index/proceedings).
+
 ## Setup
 
 [NodeJS](https://nodejs.org/) is required to run this project. It was developed using v18, but it _may_ work on other versions.
