@@ -21,8 +21,6 @@ jest.mock("../../api/parkLookup");
 
 // Snapshot test
 test("snapshot test", () => {
-  parkLookup.mockResolvedValue("parkInfo");
-
   const tree = SnapshotRenderer.create(
     <InfoLookup currentBookmark={null} />
   ).toJSON();
